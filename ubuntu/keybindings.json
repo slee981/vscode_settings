@@ -1,0 +1,85 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    /* TERMINAL */
+
+    {   // new terminal
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.new"
+    },
+    {   // split to add a new terminal to the right
+        "key": "alt+\\",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {   // kill active terminal window 
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.kill"
+    },
+    {   // toggle between editor and terminal 
+        "key": "alt+0", "command": "workbench.action.terminal.focus"
+    },
+    { 
+        "key": "alt+0", "command": "workbench.action.focusActiveEditorGroup", 
+        "when": "terminalFocus"
+    },
+    {   // select which open terminal you want to focus on 
+        "key": "alt+t",
+        "command": "workbench.action.quickOpenTerm"
+    },
+
+    /* EDITOR */
+
+    {   // shift to tab right (similar to vimium keybinding for chrome)
+        "key": "shift+alt+k",
+        "command": "workbench.action.nextEditor"
+    },
+    {   // shift to tab left 
+        "key": "shift+alt+j",
+        "command": "workbench.action.previousEditor"
+    },
+    {   // remove overridden actions to only close current tab with "ctrl+w"
+        // note the "-" before the command
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
+    {   // vim extension shortcuts
+        "key": "alt+",
+        "command": "extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
+    {
+        "key": "alt+",
+        "command": "workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+
+    /* ZEN MODE */
+
+    {   // simplify the command, where "m" stands for minimalist
+        "key": "shift+alt+m",
+        "command": "workbench.action.toggleZenMode"
+    },
+    {   
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode"
+    },
+
+    /* OTHER */
+
+    {   // restore standard cut. i think vim overrides this
+        "key": "ctrl+x",
+        "command": "editor.action.clipboardCutAction",
+        "when": "textInputFocus"
+    }
+]

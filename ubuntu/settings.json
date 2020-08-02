@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "Atom One Dark",
+    "[latex]": {
+        "editor.defaultFormatter": "nickfode.latex-formatter"
+    },
+    "latex-workshop.latex.outDir": "./",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.clean.fileTypes": [ 
+        "*.aux", "*.fdb_latexmk", "*.fls", "*.log", 
+        "*.nav", "*.out", "*.snm", "*.toc"
+    ]	
+}
