@@ -10,6 +10,24 @@
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.clean.fileTypes": [ 
         "*.aux", "*.fdb_latexmk", "*.fls", "*.log", 
-        "*.nav", "*.out", "*.snm", "*.toc"
-    ]	
+        "*.nav", "*.out", "*.snm", "*.toc", "*.bbl", 
+        "*.blg"
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ]
 }
