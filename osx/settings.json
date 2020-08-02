@@ -1,30 +1,38 @@
 {
     "workbench.colorTheme": "Atom One Dark",
-    "html.format.endWithNewline": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "explorer.confirmDragAndDrop": false,
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black",
-    "python.dataScience.sendSelectionToInteractiveWindow": true,
-    "editor.suggestSelection": "first",
-    "window.zoomLevel": 0,
     "workbench.startupEditor": "newUntitledFile",
+    "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.wrapLineLength": 80,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.formatOnSave": true,
+    "editor.suggestSelection": "first",
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 0,
+    "python.formatting.provider": "black",
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.log",
-        "*.fls",
-        "*.fdb_latexmk",
-        "__latexindent_temp.tex",
-        "*.out",
-        "*.snm",
-        "*.toc",
-        "*.nav",
-        "*.bbl",
-        "*.blg"
+        "*.aux", "*.log", "*.fls", "*.fdb_latexmk",
+        "__latexindent_temp.tex", "*.out", "*.snm", "*.toc",
+        "*.nav", "*.bbl", "*.blg"
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+               "pdflatex"
+            ]
+        },
+        {
+           "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+           "tools": [
+              "pdflatex",
+              "bibtex",
+              "pdflatex",
+              "pdflatex"
+        ]}
     ]
 }
