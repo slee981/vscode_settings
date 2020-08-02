@@ -14,6 +14,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.recipe.default": "pdflatex",
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux", "*.log", "*.fls", "*.fdb_latexmk",
         "__latexindent_temp.tex", "*.out", "*.snm", "*.toc",
