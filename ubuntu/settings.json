@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "Atom One Dark",
-    "latex-workshop.latex.outDir": "./",
+    "latex-workshop.latex.outDir": "%DIR%",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.view.pdf.tab.editorGroup": "right",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
@@ -8,9 +8,26 @@
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.clean.fileTypes": [ 
-        "*.aux", "*.fdb_latexmk", "*.fls", "*.log", 
-        "*.nav", "*.out", "*.snm", "*.toc", "*.bbl", 
-        "*.blg"
+        "*.fdb_latexmk", "*.fls", "*.aux", 
+        "*.nav", "*.out", "*.snm", "*.toc", 
+        "*.bbl", "*.log", "*.blg"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": ["%DOCFILE%"]
+        }
     ],
     "latex-workshop.latex.recipes": [
         {
